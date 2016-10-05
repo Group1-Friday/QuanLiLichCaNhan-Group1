@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery</title>
+
+<link rel="stylesheet" href="style/documentation.css" type="text/css" />
+<link rel="stylesheet" href="style/jalendar.css" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script><!--jQuery-->
+<script type="text/javascript" src="js/jalendar.js"></script>
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="css1/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css1/bootstrap-theme.css">
+
+<style type = "text/css">
+	.col-md-3 a
+	{
+		text-decoration: none;
+	}
+	.col-md-3 a img
+	{
+		width: 50px;
+		heigth: 50px;
+	}
+	.col-md-3
+	{
+		margin-top: 5px;
+		
+	}
+	#anhcanhan
+	{
+		
+		margin-bottom: 20px;
+		width: 154px;
+		
+	}
+	.col-md-6
+	{
+		background-color: #FFE4B5;
+		border: 1px solid gray;
+		margin-top: 30px;
+	}
+	.col-md-6  img
+	{
+		width: 150px;
+		heigth: 150px;
+		
+	}
+	.col-md-6  h2
+	{
+		text-align: center;
+		
+	}
+</style>
+
+<script type="text/javascript">
+	function Huy()
+		{
+			alert("Hủy đăng ký!");
+			location = "DangNhap_1.html"
+		}
+		
+		
+		
+		
+	function KiemTraDangKy()
+		{
+			var TenDN = document.getElementById("tendangnhap");
+				
+			var MatKhau_1 = document.getElementById("pass_1");
+			var MatKhau_2 = document.getElementById("pass_2");
+			var HoTen = document.getElementById("hoten");
+			var NgaySinh = document.getElementById("ngaysinh");
+			var Email = document.getElementById("email");
+			var CongTy = document.getElementById("congty");
+			var DiaChi = document.getElementById("diachi");
+			var SĐT = document.getElementById("sdt");
+			var radio_nam = document.getElementById("nam");
+			var radio_nu = document.getElementById("nu");
+			
+			if(TenDN == " " || MatKhau_1 == " " || MatKhau_2 == " " || HoTen == " " || NgaySinh == " " || Email == " "
+			|| CongTy == " " || DiaChi == " " || SĐT == " " || (document.getElementById("nam").checked == false && document.getElementById("nu") == false))
+			{
+				alert("Thông tin đăng ký không hợp lệ!Vui lòng kiểm tra lại");
+			}
+			else
+			{
+				alert("Đăng ký tài khoản thành công!");
+				location = "DangNhap_1.html"
+			}
+		}
+			
+</script>
+</head>
+<body>
+	
+	<div class = "container">
+       
+	   <div id = main>
+			<div class = "col-md-3 left">
+				
+			</div>
+			<div class = "col-md-6">
+				<article>
+			
+					<div class="row">
+			  
+						<h2>Đăng ký tài khoản</h2>
+                <form class="form-horizontal" role="form">
+					  <div class="form-group">
+						<label for="tentaikhoan" class="col-sm-2 control-label">Tên đăng nhập</label>
+						<div class="col-sm-10">
+						  <input type="text" class="form-control" id="tendangnhap" placeholder="Nhập tên đăng nhập">
+						</div>
+					  </div>
+					  <div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label">Mật khẩu</label>
+						<div class="col-sm-10">
+						  <input type="password" class="form-control" id="pass_1" placeholder="Nhập mật khẩu">
+						</div>
+					  </div>
+					  <div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label"> Nhập lại mật khẩu</label>
+						<div class="col-sm-10">
+						  <input type="password" class="form-control" id="pass_2" placeholder="Nhập lại mật khẩu">
+						</div>
+					  </div>
+					  <div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label"> Họ tên</label>
+						<div class="col-sm-10">
+						  <input type="text" class="form-control" id="hoten" placeholder=" Nhập họ tên">
+						</div>
+					  </div>
+					  
+					  <div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label"> Giới tính</label>
+						<label class="radio-inline">
+						<div class="col-sm-10">
+						  <input type="radio" name="inlineRadioOptions" id="nam" value="option1"> Nam
+						 </div>
+						</label>
+						<label class="radio-inline">
+						<div class="col-sm-10">
+						  <input type="radio" name="inlineRadioOptions" id="nu" value="option2"> Nữ
+						 </div>
+						</label>
+					  </div>
+					  
+					  <div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label"> Ngày sinh</label>
+						<div class="col-sm-10">
+						  <input type="date" class="form-control" id="ngaysinh" placeholder="Ngày sinh">
+						</div>
+					  </div>
+					  <div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label"> Email</label>
+						<div class="col-sm-10">
+						  <input type="text" class="form-control" id="email" placeholder=" Nhập Email">
+						</div>
+					  </div>
+					  <div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label"> Công ty</label>
+						<div class="col-sm-10">
+						  <input type="text" class="form-control" id="congty" placeholder="Nhập công ty">
+						</div>
+					  </div>
+					  <div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label"> Địa chỉ</label>
+						<div class="col-sm-10">
+						  <input type="text" class="form-control" id="diachi" placeholder="Nhập địa chỉ">
+						</div>
+					  </div>
+					  <div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label"> SĐT</label>
+						<div class="col-sm-10">
+						  <input type="text" class="form-control" id="sdt" placeholder="Nhập SĐT">
+						</div>
+					  </div>
+					  <div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+						  <button type="submit" onclick="KiemTraDangKy(); return false;"class="btnDangKy">Đăng ký</button>
+						</div>
+					  </div>
+					  <div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+						  <button type="submit"  onclick= "Huy(); return false;" class="btnThoat">Hủy</button>
+						</div>
+					  </div>
+					  
+				</form>
+					</div>
+				</article>
+			</div>
+	   </div>
+		
+		
+	</div>
+    
+	
+	
+	<script type="text/javascript" href="js1/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" href="js1/bootstrap.min.js"> </script>
+
+</body>
+
+</html>

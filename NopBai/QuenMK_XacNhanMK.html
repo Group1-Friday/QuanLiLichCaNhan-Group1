@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery</title>
+
+<link rel="stylesheet" href="style/documentation.css" type="text/css" />
+<link rel="stylesheet" href="style/jalendar.css" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script><!--jQuery-->
+<script type="text/javascript" src="js/jalendar.js"></script>
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="css1/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css1/bootstrap-theme.css">
+
+<style type = "text/css">
+	.col-md-3 a
+	{
+		text-decoration: none;
+	}
+	.col-md-3 a img
+	{
+		width: 50px;
+		heigth: 50px;
+	}
+	.col-md-3
+	{
+		margin-top: 5px;
+		
+	}
+	#anhcanhan
+	{
+		
+		margin-bottom: 20px;
+		width: 154px;
+		
+	}
+	.col-md-6
+	{
+		background-color: #D1EEEE;
+		border: 1px solid gray;
+		margin-top: 30px;
+	}
+	.col-md-6  img
+	{
+		width: 150px;
+		heigth: 150px;
+		
+	}
+	.col-md-6  h2
+	{
+		text-align: center;
+		
+	}
+</style>
+
+<script type="text/javascript">
+	function Huy()
+		{
+			alert("Hủy xác nhận mật khẩu");
+			location = "DangNhap_1.html"
+		}
+		
+		
+		
+		
+	function KiemTra()
+		{
+			var element = document.getElementsByTagName('input');
+			if(element[0].value != '' && element[1].value != '')
+			{
+				if(element[0].value == element[1].value)
+				{
+					alert("Cập nhật mật khẩu mới thành công");
+					location = "DangNhap_1.html"
+				}
+				else
+				{
+					alert("Mật khẩu không trùng khớp");
+				}
+				
+				
+			}
+			
+			else
+			{
+				alert("Dữ liệu nhập vào không hợp lệ!");
+				
+			}
+
+			
+		}
+	
+</script>
+</head>
+<body>
+	
+	<div class = "container">
+       
+	   <div id = main>
+			<div class = "col-md-3 left">
+				
+			</div>
+			<div class = "col-md-6">
+				<article>
+			
+					<div class="row">
+						<h2>Cập nhật mật khẩu</h2>
+                <form class="form-horizontal" role="form">
+					  <div class="form-group">
+						<label for="tentaikhoan" class="col-sm-2 control-label">Mật khẩu mới</label>
+						<div class="col-sm-10">
+						  <input type="password" class="form-control" id="pass_1" placeholder="Nhập mật khẩu mới">
+						</div>
+					  </div>
+					  <div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label">Nhập lại mật khẩu mới</label>
+						<div class="col-sm-10">
+						  <input type="password" class="form-control" id="pass_2" placeholder="Nhập lại mật khẩu mới">
+						</div>
+					  </div>
+					  
+					  
+					  <div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+						  <button type="submit" onclick="KiemTra(); return false;" class="btnXacNhan">Xác nhận</button>
+						</div>
+					  </div>
+					  <div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+						  <button type="submit" onclick= "Huy(); return false;" class="btnHuy">Hủy</button>
+						</div>
+					  </div>
+					  
+				</form>
+					</div>
+			   
+            
+				</article>
+			</div>
+			
+	   </div>
+			
+	</div>
+    
+	
+	
+	<script type="text/javascript" href="js1/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" href="js1/bootstrap.min.js"> </script>
+
+</body>
+
+</html>
